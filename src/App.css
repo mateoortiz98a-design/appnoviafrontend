@@ -1,0 +1,241 @@
+:root {
+  --cream: #f4ede4;
+  --plum: #2b1a24;
+  --rose: #9c3b52;
+  --gold: #b8935a;
+  --deep-red: #6e2039;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at 30% 20%, #f8f2ea 0%, var(--cream) 45%, #e6d9ca 100%);
+  font-family: 'Nunito', sans-serif;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  background: #fffdfb;
+  border-radius: 10px;
+  padding: 56px 48px 64px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 30px 60px -20px rgba(239, 35, 60, 0.2);
+}
+
+.card:has(.result) {
+  padding: 10px;
+  max-width: 480px;
+  width: 95%;
+}
+
+.eyebrow {
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 38px;
+  color: var(--plum);
+  margin: 0 0 10px;
+  line-height: 1.15;
+}
+
+.name-blank {
+  border-bottom: 2px dashed var(--rose);
+  padding: 0 6px;
+}
+
+.sub {
+  color: #8a6a76;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.polaroid {
+  width: 190px;
+  margin: 0 auto 32px;
+  background: #fff5f0;
+  padding: 10px 10px 24px;
+  border-radius: 4px;
+  box-shadow: 0 12px 24px -8px rgba(239, 35, 60, 0.35);
+  transform: rotate(-4deg);
+}
+
+.polaroid-img {
+  width: 100%;
+  height: 150px;
+  border-radius: 3px;
+  object-fit: cover;
+  display: block;
+}
+
+.buttons {
+  position: relative;
+  height: 64px;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 14px 30px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+}
+
+.btn-yes {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background: var(--deep-red);
+  color: #fffaf5;
+  box-shadow: 0 12px 24px -8px rgba(110, 32, 57, 0.55);
+  transition: transform 0.15s ease;
+  z-index: 2;
+}
+
+.btn-yes:hover {
+  transform: translateX(-50%) scale(1.06);
+}
+
+.btn-no {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(60px);
+  background: transparent;
+  color: #b79aa4;
+  border: 2px solid #e6d3d9;
+  transition: left 0.18s ease, top 0.18s ease;
+  z-index: 1;
+}
+
+.footer-note {
+  margin-top: 22px;
+  font-size: 12px;
+  color: #c3a9b1;
+}
+
+/* --- Collage de fotos + mensaje (pantalla de resultado) --- */
+
+.collage-frame {
+  padding: 10px;
+}
+
+.collage-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  position: relative;
+}
+
+.polaroid-wrap {
+  position: relative;
+  background: #fff;
+  padding: 8px 8px 14px;
+  border-radius: 2px;
+  box-shadow: 0 10px 18px -6px rgba(43, 26, 36, 0.35);
+}
+
+.collage-row .polaroid-wrap:nth-child(1) { transform: rotate(-4deg); z-index: 2; }
+.collage-row .polaroid-wrap:nth-child(2) { transform: rotate(3deg); }
+.collage-row:last-of-type .polaroid-wrap:nth-child(1) { transform: rotate(2deg); }
+.collage-row:last-of-type .polaroid-wrap:nth-child(2) { transform: rotate(-3deg); z-index: 2; }
+
+.tape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 46px;
+  height: 20px;
+  background: rgba(184, 147, 90, 0.5);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.collage-photo {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.collage-message {
+  text-align: center;
+  padding: 26px 10px;
+}
+
+.collage-eyebrow {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: var(--gold);
+}
+
+.collage-script {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 32px;
+  color: var(--deep-red);
+  margin: 6px 0 14px;
+}
+
+.collage-text {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--plum);
+  max-width: 300px;
+  margin: 0 auto 14px;
+}
+
+.confetti-piece {
+  position: fixed;
+  top: -20px;
+  z-index: 5;
+  animation: fall linear forwards;
+  color: var(--gold);
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(105vh) rotate(360deg);
+    opacity: 0.2;
+  }
+}
+
+.error-text {
+  color: var(--deep-red);
+  font-size: 13px;
+  margin-top: 14px;
+}
