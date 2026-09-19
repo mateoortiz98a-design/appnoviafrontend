@@ -1,11 +1,17 @@
 // Pantalla que se muestra después de aceptar: un collage de fotos con un
 // mensaje al centro. Todo es estático (no llama al backend ni envía correos).
+import imagen1 from "../img/imagen1.jpeg";
+import imagen2 from "../img/imagen2.jpeg";
+import imagen3 from "../img/imagen3.jpeg";
+import imagen4 from "../img/imagen4.jpeg";
+import imagen5 from "../img/imagen5.jpeg";
 
 const FOTOS = [
-  'https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=300&h=380&fit=crop',
-  'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=300&h=380&fit=crop',
-  'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=300&h=380&fit=crop',
-  'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=300&h=380&fit=crop',
+  imagen1,
+  imagen2,
+  imagen3,
+  imagen4
+
 ];
 
 function Polaroid({ src, alt }) {

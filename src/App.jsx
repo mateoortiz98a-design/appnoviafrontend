@@ -4,10 +4,12 @@ import ProposalQuestion from './components/ProposalQuestion';
 import ProposalResult from './components/ProposalResult';
 import launchConfetti from './components/confetti';
 import { registrarRespuesta, obtenerEstadoRespuesta } from './services/api';
+import imagen5 from './img/imagen5.jpeg'; 
+
 
 const FOTO_PLACEHOLDER =
-  'https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=400&h=400&fit=crop';
-
+  imagen5; // Puedes cambiar esto a cualquier otra imagen que quieras usar como placeholder
+  
 function App() {
   const [acepto, setAcepto] = useState(false);
   const [cargando, setCargando] = useState(true);
