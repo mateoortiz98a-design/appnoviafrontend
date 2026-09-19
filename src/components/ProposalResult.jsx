@@ -33,11 +33,10 @@ function ProposalResult() {
         </div>
 
         <div className="collage-message">
-          <div className="collage-eyebrow">Feliz de escribir</div>
-          <div className="collage-script">Lo sabía</div>
+          <div className="collage-eyebrow">malevola cucarachona</div>
+          <div className="collage-script">te amo muchisisimo</div>
           <p className="collage-text">
-            Desde ese primer día supe que quería tenerte cerca siempre.
-            Gracias por decir que sí, prometo hacerte muy feliz.
+           gracias por estar siempre a mi lado y hacerme sentir tan especial.ahora ya no hay vuelta atras muajajaja y por ser el amor de mi vida y mi novia desde ahora ...
           </p>
           <div className="collage-eyebrow">Te amo</div>
         </div>
