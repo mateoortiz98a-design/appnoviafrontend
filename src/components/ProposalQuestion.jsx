@@ -39,9 +39,9 @@ function ProposalQuestion({ onAceptar, fotoUrl }) {
       </div>
 
       <h1>
-        ¿Quieres ser mi <span className="name-blank">novia</span>?
+        ¿Queres ser mi <span className="name-blank">novia</span>?
       </h1>
-      <p className="sub">Solo hay una respuesta correcta... inténtalo si quieres 😉</p>
+      <p className="sub">Solo hay una unica respuesta... 😉</p>
 
       <div className="buttons" ref={buttonsRef}>
         <button className="btn btn-yes" onClick={handleAceptar} disabled={enviando}>
